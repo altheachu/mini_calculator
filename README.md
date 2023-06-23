@@ -1,5 +1,9 @@
 # vue_mini_calculator
 
+## Demonstration:
+
+https://altheachu.github.io/mini_calculator/
+
 ## Project setup
 ```
 yarn install

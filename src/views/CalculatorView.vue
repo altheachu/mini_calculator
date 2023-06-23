@@ -37,11 +37,19 @@ export default {
       switch (operator) {
         case 'C':
           this.numberStr = '0'
+          this.currentOperator = ''
+          this.lastNumberStr = ''
           break
         case '+':
         case '-':
         case '*':
         case '/':
+          console.log('lastNumber', this.lastNumberStr)
+          console.log('currentOperator', this.currentOperator)
+          console.log('numberStr', this.numberStr)
+          if (this.lastNumberStr !== '' && this.currentOperator !== '') {
+            this.cal()
+          }
           this.currentOperator = operator
           this.digitAfterOperator = true
       }
@@ -65,6 +73,8 @@ export default {
           break
       }
       this.numberStr = calResult.toString()
+      this.lastNumberStr = ''
+      this.currentOperator = ''
     }
   }
 }
